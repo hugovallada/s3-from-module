@@ -23,3 +23,11 @@ provider "aws" {
     }
   }
 }
+
+module "s3" {
+  source            = "https://github.com/hugovallada/s3-from-module.git"
+  bucket_name       = "s3-module"
+  public_access     = true
+  lyfecicle_enabled = true
+  days              = 20
+}
